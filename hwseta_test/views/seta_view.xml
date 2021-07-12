@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="seta_root"
+                  name="HWSETA"/>
+        <record id="action_list_learners" model="ir.actions.act_window">
+            <field name="name">Learners</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hwseta.learners</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id='seta_learner_menuitem'
+                  name='Learners'
+                  parent="seta_root"
+                  action='action_list_learners' sequence="7"/>
+        <record id="action_list_qualifications" model="ir.actions.act_window">
+            <field name="name">Qualifications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hwseta.qualifications</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id='seta_qualification_menuitem'
+                  name='qualifications'
+                  parent="seta_root"
+                  action='action_list_qualifications' sequence="7"/>
+        <record id="action_list_units" model="ir.actions.act_window">
+            <field name="name">Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hwseta.units</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id='seta_unit_menuitem'
+                  name='units'
+                  parent="seta_root"
+                  action='action_list_units' sequence="7"/>
+        <record id="action_list_learner_units" model="ir.actions.act_window">
+            <field name="name">Learner Units</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">learner.units</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id='seta_learner_unit_menuitem'
+                  name='Learner units'
+                  parent="seta_root"
+                  action='action_list_learner_units' sequence="7"/>
+        <record id="action_list_learner_qualifications" model="ir.actions.act_window">
+            <field name="name">Learner Qualifications</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">learner.qualifications</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id='seta_learner_qualification_menuitem'
+                  name='Learner qualifications'
+                  parent="seta_root"
+                  action='action_list_learner_qualifications' sequence="7"/>
+    </data>
+</odoo>
